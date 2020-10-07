@@ -102,8 +102,10 @@ $(document).ready(function () {
       //make sure the btns work
       //getting the hour
       //getting userinput
-      console.log($(this).parent().children()[1].val())
-      //set localstorage
+    //   console.log($(this).parent);
+    var textInput = $("textArea").val();
+    console.log(textInput);
+      //set local storage
     });
 
       //all the jquery to get data from localstorage
