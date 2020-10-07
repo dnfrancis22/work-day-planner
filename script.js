@@ -45,17 +45,24 @@ $(document).ready(function () {
       //5. append to html
       */
       //.container
-      for(var i=0;i<timeArr.length;i++){
+      for(var i = 0;  i < timeArr.length; i ++ ){
+
       var d1=$("<div>");
       d1.attr("class","row time block");
 
       var d2=$("<div>");
       d2.attr("class","col-sm-1 hour");
       d2.text(timeArr[i]);
-      //if cond to update the milt -> normal time
-      //(any num greater than 12) 13-12: 1+PM
-      //less than 12: time+AM
-      //if 12: time+PM
+    //   cond to update the milt -> normal time
+      if (timeArr[i] > 12) {
+          d2.text(timeArr[i] - 12 + "PM");
+      };
+      if (timeArr[i] < 12) {
+          d2.text(timeArr[i] + "AM");
+      };
+      if (timeArr[i] === 12) {
+          d2.text(timeArr[i] + "PM");
+      };
 
       var textarea=$("<textarea>");
    
@@ -95,7 +102,7 @@ $(document).ready(function () {
       //make sure the btns work
       //getting the hour
       //getting userinput
-      console.log($(this).parent().children()[1])
+      console.log($(this).parent().children()[1].val())
       //set localstorage
     });
 
