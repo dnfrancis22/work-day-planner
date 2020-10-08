@@ -95,66 +95,103 @@ $(document).ready(function () {
     $(".saveBtn").click(function () {
       console.log($(this).attr("id"));
 
-      //make sure the btns work
-      //getting the hour
-      //getting userinput
-      //   console.log($(this).parent);
       var nine = $("#9").val();
-      console.log(nine);
       //set local storage
+      if (nine) {
       localStorage.setItem("9", nine);
+      }
 
       var ten = $("#10").val();
-      console.log(ten);
       //set local storage
+      if (ten) {
       localStorage.setItem("10", ten);
+      } 
 
       var eleven = $("#11").val();
-      console.log(eleven);
       //set local storage
-      localStorage.setItem("11", eleven);
+      if (eleven) {
+        localStorage.setItem("11", eleven);
+      }
 
       var twelve = $("#12").val();
-      console.log(twelve);
       //set local storage
+      if (twelve) {
       localStorage.setItem("12", twelve);
+      }
 
       var thirteen = $("#13").val();
-      console.log(thirteen);
       //set local storage
+      if (thirteen) {
       localStorage.setItem("13", thirteen);
+      }
 
       var fourteen = $("#14").val();
-      console.log(fourteen);
       //set local storage
+      if (fourteen) {
       localStorage.setItem("14", fourteen);
+      }
 
       var fifteen = $("#15").val();
-      console.log(fifteen);
       //set local storage
+      if (fifteen) {
       localStorage.setItem("15", fifteen);
+      }
 
       var sixteen = $("#16").val();
-      console.log(sixteen);
       //set local storage
+      if (sixteen) {
       localStorage.setItem("16", sixteen);
+      }
 
       var seventeen = $("#17").val();
-      console.log(seventeen);
       //set local storage
+      if (seventeen) {
       localStorage.setItem("17", seventeen);
+      }
+
     });
 
     //all the jquery to get data from localstorage
     // $(".11").getItem("11")
+    var rNine = localStorage.getItem("9");
+    console.log(rNine);
+    $("#9").text(rNine);
+
+    var rTen = localStorage.getItem("10");
+    console.log(rTen);
+    $("#10").text(rTen);
+
+    var rEleven = localStorage.getItem("11");
+    console.log(rEleven);
+    $("#11").text(rEleven);
+
+    var rTwelve = localStorage.getItem("12");
+    console.log(rTwelve);
+    $("#12").text(rTwelve);
+
+    var rThirteen = localStorage.getItem("13");
+    console.log(rThirteen);
+    $("#13").text(rThirteen);
+
+    var rFourteen = localStorage.getItem("14");
+    console.log(rFourteen);
+    $("#14").text(rFourteen);
+
+    var rFifteen = localStorage.getItem("15");
+    console.log(rFifteen);
+    $("#15").text(rFifteen);
+
+    var rSixteen = localStorage.getItem("16");
+    console.log(rSixteen);
+    $("#16").text(rSixteen);
+
+    var rSeventeen = localStorage.getItem("17");
+    console.log(rSeventeen);
+    $("#17").text(rSeventeen);
 
     
+
   }
-
-  // function calls
-
-  // event listeners
-
   $("#currentDay").text(m.format("ddd MMM Mo YYYY"));
   createBlock();
 });
