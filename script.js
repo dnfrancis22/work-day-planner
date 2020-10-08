@@ -64,6 +64,7 @@ $(document).ready(function () {
       }
 
       var textArea = $("<textArea>");
+      textArea.attr("id", timeArr[i]);
 
       //when is it present (timeArr[i] and currentTime)
       if (timeArr[i] == currentTime) {
@@ -90,11 +91,6 @@ $(document).ready(function () {
       $(".container").append(d1);
     }
 
-    
-    var retrievedData = localStorage.getItem("input");
-    textArea.textContent = retrievedData;
-
-
     //onclick trigger on .saveBtn
     $(".saveBtn").click(function () {
       console.log($(this).attr("id"));
@@ -103,15 +99,56 @@ $(document).ready(function () {
       //getting the hour
       //getting userinput
       //   console.log($(this).parent);
-      var textInput = $("textArea").val();
-      console.log(textInput);
+      var nine = $("#9").val();
+      console.log(nine);
       //set local storage
-      localStorage.setItem("input", textInput);
+      localStorage.setItem("9", nine);
+
+      var ten = $("#10").val();
+      console.log(ten);
+      //set local storage
+      localStorage.setItem("10", ten);
+
+      var eleven = $("#11").val();
+      console.log(eleven);
+      //set local storage
+      localStorage.setItem("11", eleven);
+
+      var twelve = $("#12").val();
+      console.log(twelve);
+      //set local storage
+      localStorage.setItem("12", twelve);
+
+      var thirteen = $("#13").val();
+      console.log(thirteen);
+      //set local storage
+      localStorage.setItem("13", thirteen);
+
+      var fourteen = $("#14").val();
+      console.log(fourteen);
+      //set local storage
+      localStorage.setItem("14", fourteen);
+
+      var fifteen = $("#15").val();
+      console.log(fifteen);
+      //set local storage
+      localStorage.setItem("15", fifteen);
+
+      var sixteen = $("#16").val();
+      console.log(sixteen);
+      //set local storage
+      localStorage.setItem("16", sixteen);
+
+      var seventeen = $("#17").val();
+      console.log(seventeen);
+      //set local storage
+      localStorage.setItem("17", seventeen);
     });
 
     //all the jquery to get data from localstorage
     // $(".11").getItem("11")
 
+    
   }
 
   // function calls
